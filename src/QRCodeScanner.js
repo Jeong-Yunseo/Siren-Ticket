@@ -31,14 +31,14 @@ const QRCodeScanner = () => {
       <div style={{ marginTop: '20px', fontSize: '20px' }}>
         {scannedData && (
           <>
-            <p>스캔된 데이터:</p>
-            <p>{scannedData}</p>
+            {/* <p>스캔된 데이터:</p>
+            <p>{scannedData}</p> */}
             {/* 파싱된 데이터 화면에 표시 */}
             {scannedData.includes('Name') && scannedData.includes('Number') && scannedData.includes('Part') ? (
               <>
-                <p>이름: {scannedData.match(/Name: ([\w\s,]+)/)[1]}</p>
-                <p>기수: {scannedData.match(/Number: ([\w\s,]+)/)[1]}</p>
-                <p>파트: {scannedData.match(/Part: ([\w\s,]+)/)[1]}</p>
+                <p>이름: {scannedData.match(/Name: ([\w\s]+)/)[1]}</p>
+                <p>기수: {scannedData.match(/Number: ([\w\s]+)/)[1]}기</p>
+                <p>파트: {scannedData.match(/Part: ([\w\s]+)/)[1]}</p>
               </>
             ) : (
               <p>유효한 데이터가 아닙니다.</p>
