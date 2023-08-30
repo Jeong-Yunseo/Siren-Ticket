@@ -1,0 +1,11 @@
+.my-container {
+    background-image: url('/public/qr_generation_wall2.png');
+    background-size: cover;
+    background-repeat: repeat;
+    width: 100%;
+    height: 100vh; /* 화면 높이에 맞게 조정 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
