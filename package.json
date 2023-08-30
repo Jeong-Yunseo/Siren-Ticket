@@ -6,8 +6,9 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "gh-pages": "^6.0.0",
     "qrcode-generator": "^1.4.4",
-    "quagga": "^0.12.1",
+    "quagga": "^0.6.16",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-qr-scanner": "^1.0.0-alpha.11",
@@ -19,7 +20,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploly": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -38,5 +41,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "homepage": "https://jeong-yunseo.github.io"
 }
