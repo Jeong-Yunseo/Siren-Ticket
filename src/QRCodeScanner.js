@@ -20,7 +20,7 @@ const QRCodeScanner = () => {
   }
 
   return (
-    <div style={{marginLeft: '10px'}}>
+    <div className='qr-scan-container' style={{marginLeft: '10px'}}>
       <h1 style={{marginLeft: '10px'}}>QR Code Scanner</h1>
       <QrScanner
         delay={300}
@@ -36,9 +36,9 @@ const QRCodeScanner = () => {
             {/* 파싱된 데이터 화면에 표시 */}
             {scannedData.includes('Name') && scannedData.includes('Number') && scannedData.includes('Part') ? (
               <>
-                <p>이름: {scannedData.match(/Name: ([\w\s]+)/)[1]}</p>
-                <p>기수: {scannedData.match(/Number: ([\w\s]+)/)[1]}기</p>
-                <p>파트: {scannedData.match(/Part: ([\w\s]+)/)[1]}</p>
+                <p style={{fontSize: '25px', fontFamily: 'NanumGothic', fontWeight: 'bold'}}>이름: {scannedData.match(/Name: ([\w\s]+)/)[1]}</p>
+                <p style={{fontSize: '25px', fontFamily: 'NanumGothic', fontWeight: 'bold'}}>기수: {scannedData.match(/Number: ([\w\s]+)/)[1]}기</p>
+                <p style={{fontSize: '25px', fontFamily: 'NanumGothic', fontWeight: 'bold'}}>파트: {scannedData.match(/Part: ([\w\s]+)/)[1]}</p>
               </>
             ) : (
               <p>유효한 데이터가 아닙니다.</p>
@@ -53,7 +53,7 @@ const QRCodeScanner = () => {
       )
 
       }
-      <Link to="/" style={{fontSize: '20px', textDecoration: 'none', marginTop: '20px', display: 'block'}}>
+      <Link to="/" style={{fontSize: '25px', textDecoration: 'none', marginTop: '20px', display: 'block', fontFamily: 'NanumGothic', fontWeight: 'bold'}}>
         QR 코드 생성기
       </Link>
     </div>
